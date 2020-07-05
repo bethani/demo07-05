@@ -1,0 +1,43 @@
+#%RAML 1.0
+baseUri: https://anypoint.mulesoft.com/mocking/api/v1/links/0e6c587f-f30f-4d62-9f6d-f43154793616/ # 
+title: CustomerAPI
+
+description: this is customer Api to manage customor data
+
+/Customer:
+  get:
+    description: this metoud is retereive the customer informaton system
+    queryParameters:
+      id:
+        required: true
+        example: "12345"    
+    responses:
+      200:
+        body:
+          application/json:
+            example:
+               {
+            "firstname": "Kebede",
+            "lastname" : "dawed"         
+              }
+      500:
+        body:
+          application/json:
+            example: "Internal Error"
+  post:
+    description: this mathod will allow to creat the customer information in the system.
+    body:
+        application/json:
+          example:
+            {
+            "firstname": "Dawit",
+            "lastname" : "Kebede"         
+              }
+
+            
+              
+          
+
+            
+           
+          
